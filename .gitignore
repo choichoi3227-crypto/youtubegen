@@ -1,0 +1,8 @@
+node_modules/
+.DS_Store
+.env
+dist/
+.wrangler/
+# 대용량 영상 출력물 폴더 (LFS로 관리하거나 무시)
+outputs/
+*.mp4
