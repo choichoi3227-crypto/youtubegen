@@ -1,0 +1,18 @@
+CREATE DATABASE IF NOT EXISTS yt_automation;
+USE yt_automation;
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS projects (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    title VARCHAR(255),
+    video_path VARCHAR(255),
+    status VARCHAR(50) DEFAULT 'pending',
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
