@@ -1,0 +1,11 @@
+name = "ai-yt-master"
+pages_build_output_dir = "."
+
+[vars]
+# AI 서버(ComfyUI/XTTS가 구동되는 GPU 서버)의 터널 주소
+AI_SERVER_URL = "https://your-gpu-server-tunnel.com"
+# GitHub API 연동을 위한 토큰 (대시보드에서 설정 권장)
+GITHUB_REPO = "username/repo-name"
+
+[[env.production.vars]]
+NODE_VERSION = "18"
